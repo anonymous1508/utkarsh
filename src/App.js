@@ -1,23 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+// App.js
+
+import React from 'react';
+import LandingPage from './LandingPage';
+import About from './About';
+import Projects from './Projects';
+
 
 function App() {
+  const appStyle = {
+    fontFamily: 'Arial, sans-serif',
+    textAlign: 'center',
+    backgroundColor: '#f8f8f8',
+    padding: '20px',
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div style={appStyle}>
+      <header>
+        <h1>My Portfolio</h1>
+        <nav>
+          <a href="#landing">Home</a> | <a href="#projects">Projects</a> | <a href="#about">About</a>
+        </nav>
       </header>
+
+      <LandingPage />
+      <About />
+      <Projects />
+      
+
+      <footer>
+        <p>&copy; 2023 My Portfolio. All rights reserved.</p>
+      </footer>
     </div>
   );
 }
